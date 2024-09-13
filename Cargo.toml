@@ -14,7 +14,8 @@ rust-version = "1.66"
 
 [features]
 default = []
-tls-rustls = ["tls-rustls-no-provider", "rustls/aws-lc-rs"]
+tls-rustls = ["tls-rustls-no-provider", "rustls/ring"]
+tls-rustls-aws = ["tls-rustls-no-provider", "rustls/aws-lc-rs"]
 tls-rustls-no-provider = ["arc-swap", "rustls", "rustls-pemfile", "tokio/fs", "tokio/time", "tokio-rustls", "rustls-pki-types", "dep:pin-project-lite"]
 tls-openssl = ["arc-swap", "openssl", "tokio-openssl", "dep:pin-project-lite"]
 
