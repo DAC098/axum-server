@@ -5,8 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog], and this project adheres to
 [Semantic Versioning].
 
-# Unreleased
+# 0.8.0 (7. December 2025)
 
+- **changed**: `Server` is now generic over connections, allowing `axum-server` to listen not just on TCP. 
+- **added**: Support for Unix sockets has been implemented and an example for Unix sockets has been provided.
+- **changed**: `rustls-pemfile` was replaced with `rustls-pki-types` as it is now unmaintained.
+
+# 0.7.4 (16. November 2025)
+
+- **added**: Support for http1-only and http2-only servers.
+- **changed**: Improved error messages that come from parsing pemfiles with rustls.
+
+# 0.7.3 (15. November 2025)
+
+- **fixed**: `axum-server` not compiling in hyper `1.8.0`.
+
+# 0.7.2 (14. March 2025)
+
+- **changed**: Use fs-err to augment errors loading pem files.
 - **changed**: Updated `tower` from `0.4` to `0.5`.
 - **added**: Support reading PKCS\#1 and SEC1 private keys with Rustls.
 
